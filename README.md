@@ -70,7 +70,7 @@ Before submission:
 5. Submit the repository URL through the recruitment portal, confirm submission and retain the confirmation or receipt.
 
 - **Repository URL:** https://github.com/Vanshika2039/FINAL_ifhe-workflow-and-curriculum-audit-2026
-- **Full commit URL:** TODO
+- **Full commit URL:** https://github.com/Vanshika2039/FINAL_ifhe-workflow-and-curriculum-audit-2026/commit/6d9ad8d
 - **Release URL:** TODO
 
 This repository contains student work and does not represent an official IFHE syllabus revision or institutional process.
