@@ -1,0 +1,7 @@
+date,entry_id,evidence_or_claim,classification,source_or_method,confidence,limitation_or_next_action
+2026-10-24,T1-01,The assessment instructions require workflow mapping and synthetic tests,Observed in assignment brief,User-provided assessment brief,High,Not an external institutional fact
+2026-10-24,T1-02,No real IFHE workflow was accessible to the submitter,Observed constraint,Submitter's access status,High,Do not imply field research occurred
+2026-10-24,T1-03,A request intake process may have missing fields or duplicate submissions,Assumption,Design hypothesis only,Low,Validate with authorized process owner
+2026-10-24,T1-04,A single tracking ID and explicit statuses may improve visibility,Design proposal,Process-design reasoning,Medium,Test with synthetic cases then authorized pilot
+2026-10-24,T1-05,Illustrative baseline is 100 requests/month,Assumption,Planning scenario only,Low,Replace with permitted aggregate count if available
+2026-10-24,T1-06,All five cases in test-cases.csv are synthetic,Test artifact,Authored test design,High,Not actual student transactions

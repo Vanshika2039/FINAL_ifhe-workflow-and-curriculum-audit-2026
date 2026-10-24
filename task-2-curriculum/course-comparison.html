@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course Comparison and Credit Calculator</title>
+<style>
+body{font-family:system-ui,Arial,sans-serif;max-width:1000px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#202124}
+label{display:inline-block;margin:.5rem 1rem .5rem 0}
+input,select{padding:.45rem;border:1px solid #888;border-radius:6px;max-width:100%}
+table{border-collapse:collapse;width:100%;margin-top:1rem}
+th,td{border:1px solid #ccc;padding:.55rem;text-align:left}
+th{background:#f2f2f2}
+.notice{border-left:4px solid #888;padding:.7rem 1rem;background:#f7f7f7}
+.table-wrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<h1>Course Comparison &amp; Credit Calculator</h1>
+
+<p class="notice"><strong>Evidence limitation:</strong>
+Course names and credits below are transcribed from the student's
+available course record for Semesters 1–7. They have not been independently
+verified against the official 2023-entry regulations. Semester 8 credits
+and full-programme requirements remain unverified. This tool supports
+curriculum-audit discussion, not official academic decisions.</p>
+
+<label>Semester
+<select id="semester">
+<option value="">All semesters</option>
+<option value="1">1</option><option value="2">2</option>
+<option value="3">3</option><option value="4">4</option>
+<option value="5">5</option><option value="6">6</option>
+<option value="7">7</option><option value="8">8</option>
+</select></label>
+
+<label>Search course
+<input id="search" type="search" placeholder="e.g. database"></label>
+
+<label>Verified full-programme credits
+<input id="total" type="number" min="1" placeholder="Leave blank until verified"></label>
+
+<label>Target affected credits (%)
+<input id="percent" type="number" min="20" max="25" value="22"></label>
+
+<p id="calc" aria-live="polite">Enter a verified full-programme credit total to calculate the proposed target.</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Semester</th><th>Course</th><th>Credits</th><th>Audit focus</th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+
+<script>
+const courses = [
+[1,"Environmental Sciences",2,"KEEP: environmental foundations"],
+[1,"Computer Programming",4,"KEEP: programming foundations"],
+[1,"English Language Skills",3,"KEEP: communication"],
+[1,"Essence of Indian Traditional Knowledge",0,"VERIFY course status and credit treatment"],
+[1,"Linear Algebra and Ordinary Differential Equations",3,"KEEP: mathematical foundations"],
+[1,"Engineering Graphics",3,"KEEP: engineering foundations"],
+[1,"Physics",5,"KEEP: science foundations"],
+
+[2,"Chemistry",4,"KEEP: science foundations"],
+[2,"Data Structures",4,"KEEP: programming foundations"],
+[2,"Introduction to AI and DS",3,"UPDATE: practical data exercises"],
+[2,"Basic Electronics",4,"KEEP: engineering foundations"],
+[2,"Professional Communication",3,"UPDATE: technical communication"],
+[2,"Higher Calculus",3,"KEEP: mathematical foundations"],
+[2,"Digital Fabrication",3,"KEEP / review applied learning"],
+
+[3,"Power Skills-I",1,"UPDATE: teamwork and presentation"],
+[3,"Object Oriented Programming Concepts",4,"KEEP: programming foundations"],
+[3,"Theory of Computation",3,"KEEP: computing theory"],
+[3,"Design and Analysis of Algorithms",3,"KEEP: algorithm foundations"],
+[3,"Introduction to IoT",3,"UPDATE: applied data collection"],
+[3,"Integral Transforms and Probability & Statistics",3,"UPDATE: applied statistical analysis"],
+[3,"Discrete Mathematics",3,"KEEP: mathematical foundations"],
+[3,"Engineering Economics and Management",3,"UPDATE: data-informed decisions"],
+
+[4,"Power Skills-II",1,"UPDATE: professional skills"],
+[4,"Computer Organization and Architecture",3,"KEEP: systems foundations"],
+[4,"Web-Enabled Technologies",4,"UPDATE: APIs and integration"],
+[4,"Database Management Systems",4,"UPDATE: SQL, validation and data quality"],
+[4,"Industry Coding Practice (Python/R)",3,"UPDATE: reproducible analysis"],
+[4,"Data Science",3,"UPDATE: data cleaning and evaluation"],
+[4,"Fundamentals of Signal Processing",3,"KEEP: technical foundations"],
+[4,"Dynamics of Social Change",3,"UPDATE: responsible data use"],
+
+[5,"Power Skills-III",1,"UPDATE: collaboration"],
+[5,"Principle of Cryptography",3,"KEEP: security foundations"],
+[5,"Operating Systems",4,"KEEP: systems foundations"],
+[5,"Programming Language and Compiler Construction",3,"KEEP: computing foundations"],
+[5,"Software Engineering",3,"UPDATE: requirements and workflow design"],
+[5,"Blockchain Technology",3,"REVIEW: practical relevance and learning outcomes"],
+[5,"Machine Learning",4,"UPDATE: leakage-safe evaluation"],
+[5,"Constitution of India",3,"KEEP: civic foundations"],
+
+[6,"Power Skills-IV",1,"UPDATE: career readiness"],
+[6,"Computer Vision",3,"UPDATE: data quality and evaluation"],
+[6,"Computer Networks",4,"KEEP: networking foundations"],
+[6,"Cloud Computing",4,"UPDATE: deployment and monitoring"],
+[6,"Artificial Intelligence",3,"UPDATE: evaluation and limitations"],
+[6,"Big Data Systems",3,"UPDATE: reproducible data pipelines"],
+[6,"Special Project",3,"ADD applied workflow-audit capstone"],
+
+[7,"Ethical Hacking",3,"KEEP / update security testing"],
+[7,"Human Computer Interaction",3,"UPDATE: usability and user testing"],
+[7,"Foundations for Virtual and Augmented Reality Systems",3,"REVIEW: applied elective outcomes"],
+[7,"Business Intelligence and Analysis",3,"UPDATE: dashboards and decision support"],
+[7,"Education for Sustainable Development",3,"KEEP: sustainability perspective"],
+
+[8,"Internship / other Semester 8 requirements",null,"VERIFY official batch-specific credit value and rules"]
+];
+
+const tbody = document.getElementById("rows");
+
+function render() {
+ const sem = document.getElementById("semester").value;
+ const q = document.getElementById("search").value.trim().toLowerCase();
+ tbody.replaceChildren();
+
+ courses.filter(c =>
+   (!sem || String(c[0]) === sem) &&
+   c[1].toLowerCase().includes(q)
+ ).forEach(c => {
+   const tr = document.createElement("tr");
+   [c[0], c[1], c[2] === null ? "Unverified" : c[2], c[3]].forEach(v => {
+     const td = document.createElement("td");
+     td.textContent = v;
+     tr.appendChild(td);
+   });
+   tbody.appendChild(tr);
+ });
+
+ const total = Number(document.getElementById("total").value);
+ const p = Number(document.getElementById("percent").value);
+ const calc = document.getElementById("calc");
+
+ if (total > 0 && p >= 20 && p <= 25) {
+   calc.textContent = `At ${p}% of ${total} verified programme credits, the proposed affected-credit target is ${(total*p/100).toFixed(2)} credits. This is a planning target, not an approved curriculum change.`;
+ } else {
+   calc.textContent = "Enter a verified full-programme credit total and a target between 20% and 25% to calculate the proposed target.";
+ }
+}
+
+["semester","search","total","percent"].forEach(id =>
+ document.getElementById(id).addEventListener("input", render)
+);
+render();
+</script>
+</body>
+</html>

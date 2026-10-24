@@ -1,0 +1,52 @@
+semester,course_code,course_name,credits,route_note,evidence_status
+1,CH102,Environmental Sciences,2.0,College,Student-provided portal information; not independently checked against official cohort regulations
+1,CS101,Computer Programming,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+1,EG101,English Language Skills,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+1,HS101,Essence of Indian Traditional Knowledge,0.0,College,Student-provided portal information; not independently checked against official cohort regulations
+1,MA101,Linear Algebra and Ordinary Differential Equations,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+1,MT102,Engineering Graphics,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+1,PHY101,Physics,5.0,College,Student-provided portal information; not independently checked against official cohort regulations
+2,CH101,Chemistry,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+2,CS102,Data Structures,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+2,DS101,Introduction to AI and DS,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+2,EC101,Basic Electronics,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+2,EG102,Professional Communication,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+2,MA102,Higher Calculus,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+2,MT101,Digital Fabrication,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,CR201,Power Skills-I,1.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,CS201,Object Oriented Programming Concepts,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,CS202,Theory of Computation,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,CS203,Design and Analysis of Algorithms,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,EC201,Introduction to IoT,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,MA201,Integral Transforms and Probability & Statistics,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,MA202,Discrete Mathematics,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+3,MG201,Engineering Economics and Management,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,CR202,Power Skills-II,1.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,CS204,Computer Organization and Architecture,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,CS205,Web-Enabled Technologies,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,CS206,Database Management Systems,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,DS202,Industry Coding Practice (Python/R),3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,DS203,Data Science,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,EC102,Fundamentals of Signal Processing,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+4,HS201,Dynamics of Social Change,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,CR301,Power Skills-III,1.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,CS301,Principle of Cryptography,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,CS302,Operating Systems,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,CS303,Programming Language and Compiler Construction,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,CS304,Software Engineering,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,DS303,Blockchain Technology,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,DS304,Machine Learning,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+5,HS301,Constitution of India,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+6,CR302,Power Skills-IV,1.0,College,Student-provided portal information; not independently checked against official cohort regulations
+6,CS305,Computer Vision,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+6,CS306,Computer Networks,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+6,CS307,Cloud Computing,4.0,College,Student-provided portal information; not independently checked against official cohort regulations
+6,DS201,Artificial Intelligence,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+6,DS307,Big Data Systems,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+6,SP301,Special Project,3.0,College,Student-provided portal information; not independently checked against official cohort regulations
+7,CS415,Ethical Hacking,3.0,College in this student's route,Student-provided portal information; not independently checked against official cohort regulations
+7,DS401,Human Computer Interaction,3.0,College in this student's route,Student-provided portal information; not independently checked against official cohort regulations
+7,OE418,Foundations for Virtual and Augmented Reality Systems,3.0,NPTEL transfer for this student,Student-provided portal information; not independently checked against official cohort regulations
+7,OE707,Business Intelligence & Analytics,3.0,NPTEL transfer for this student,Student-provided portal information; not independently checked against official cohort regulations
+7,OE800,Education for Sustainable Development,3.0,NPTEL transfer for this student,Student-provided portal information; not independently checked against official cohort regulations
+8,TBD,Internship,,Internship; credit value not verified,Semester 8 requirement reported by student; credit value and additional requirements unverified
