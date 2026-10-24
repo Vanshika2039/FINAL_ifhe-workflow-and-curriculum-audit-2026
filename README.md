@@ -69,7 +69,7 @@ Before submission:
 4. Replace the placeholders below with actual URLs.
 5. Submit the repository URL through the recruitment portal, confirm submission and retain the confirmation or receipt.
 
-- **Repository URL:** TODO
+- **Repository URL:** https://github.com/Vanshika2039/FINAL_ifhe-workflow-and-curriculum-audit-2026
 - **Full commit URL:** TODO
 - **Release URL:** TODO
 
