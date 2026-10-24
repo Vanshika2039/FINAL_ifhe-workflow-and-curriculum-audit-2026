@@ -71,6 +71,6 @@ Before submission:
 
 - **Repository URL:** https://github.com/Vanshika2039/FINAL_ifhe-workflow-and-curriculum-audit-2026
 - **Full commit URL:** https://github.com/Vanshika2039/FINAL_ifhe-workflow-and-curriculum-audit-2026/commit/6d9ad8d
-- **Release URL:** TODO
+- **Release URL:** https://github.com/Vanshika2039/FINAL_ifhe-workflow-and-curriculum-audit-2026/releases/tag/v1.0.0
 
 This repository contains student work and does not represent an official IFHE syllabus revision or institutional process.
